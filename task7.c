@@ -1,11 +1,6 @@
 #include <stdio.h>
-#include <stdlib.h>
+#include <math.h>
 #include <windows.h>
-
-// Функция для печати числа с указанным количеством сдвигов
-void print_shifted(int num, int shift) {
-    printf("%*d\n", shift + 1, num);
-}
 
 int main() {
     SetConsoleOutputCP(CP_UTF8);
@@ -38,13 +33,6 @@ int main() {
     printf("x %d\n", l);
     printf("-----\n");
 
-    shift = 0;
-    for (int i = 0; i < num_intermediate_results; i++) {
-        print_shifted(intermediate_results[i], shift);
-        shift++;
-    }
-
-    printf("-----\n");
     printf("%d\n", result);
 
     return 0;
